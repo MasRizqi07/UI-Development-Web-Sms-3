@@ -1,43 +1,10 @@
-/* ==========================================================
-   style.css | Halaman profil Ahmad Rizqi Mubarok
-   Mata kuliah: Pengembangan Antarmuka Web
-
-   KONSEP DESAIN
-   Terinspirasi dari foto profil: coverall hitam dengan strip
-   reflektif kuning-hijau. Jadi warna halaman = hitam pekerja,
-   abu beton, dan kuning reflektif sebagai penanda.
-
-   TIGA JENIS SELECTOR YANG DIPAKAI (materi minggu ini):
-   1. Selector elemen   -> body, h1, a        (menarget TAG)
-   2. Selector class    -> .hero, .btn        (menarget atribut class)
-   3. Selector turunan / kombinasi
-                        -> .hero__text > p, .nav-link:hover
-   Tata letak memakai FLEXBOX (display: flex) di semua bagian.
-
-   DAFTAR ISI
-   1. Variabel warna & ukuran
-   2. Reset dasar
-   3. Komponen umum (tape, tombol, judul section)
-   4. Header
-   5. Hero (+ animasi pembuka)
-   6. Tentang & data diri
-   7. Perjalanan
-   8. Keahlian
-   9. Proyek
-   10. Kontak & footer
-   11. Responsif & aksesibilitas
-   ========================================================== */
-
-
-/* ---------- 1. VARIABEL ---------- */
-/* :root = elemen paling atas (html). Variabel dipakai dengan var(--nama) */
 :root {
-  --black:   #14120f;   /* hitam coverall */
-  --steel:   #3b3a36;   /* abu baja */
-  --concrete:#dedcd5;   /* abu beton (latar halaman) */
-  --paper:   #f2f0ea;   /* putih kertas */
-  --hivis:   #d8f031;   /* kuning reflektif (warna aksen utama) */
-  --amber:   #f0a64a;   /* cahaya oranye di foto */
+  --black:   #14120f;
+  --steel:   #3b3a36;
+  --concrete:#dedcd5;
+  --paper:   #f2f0ea;
+  --hivis:   #d8f031;
+  --amber:   #f0a64a;
 
   --font-display: "Barlow Condensed", "Arial Narrow", Impact, sans-serif;
   --font-body:    "Public Sans", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
@@ -49,7 +16,7 @@
 
 /* ---------- 2. RESET DASAR ---------- */
 * {
-  box-sizing: border-box;   /* padding & border ikut dihitung di lebar elemen */
+  box-sizing: border-box;
 }
 
 html {
@@ -84,7 +51,6 @@ a {
   color: inherit;
 }
 
-/* Fokus keyboard yang jelas (aksesibilitas) */
 a:focus-visible {
   outline: 3px solid var(--amber);
   outline-offset: 3px;
@@ -108,14 +74,12 @@ a:focus-visible {
 
 /* ---------- 3. KOMPONEN UMUM ---------- */
 
-/* Pembungkus agar isi tidak terlalu lebar di layar besar */
 .container {
   width: 100%;
   max-width: var(--page-width);
   margin: 0 auto;
 }
 
-/* "Tape": pita reflektif seperti strip di lengan coverall */
 .tape {
   height: 26px;
   background: linear-gradient(
@@ -192,8 +156,6 @@ a:focus-visible {
   background: var(--hivis);
 }
 
-/* Penanda bagian yang HARUS kamu edit sendiri.
-   Hapus class "edit" di HTML kalau sudah diisi. */
 .edit {
   background: rgba(240, 166, 74, 0.35);
   outline: 2px dashed var(--amber);
@@ -222,7 +184,6 @@ a:focus-visible {
   padding: 0 1.25rem;
 }
 
-/* Brand dibuat seperti label nama di dada coverall */
 .brand {
   padding: 0.2rem 0.8rem;
   background: var(--hivis);
@@ -260,12 +221,12 @@ a:focus-visible {
   color: var(--paper);
   padding: 3.5rem 1.25rem 4.5rem;
   scroll-margin-top: var(--header-h);
-  overflow: hidden;   /* cahaya di belakang foto tidak boleh bikin scroll samping */
+  overflow: hidden;
 }
 
 .hero__inner {
   display: flex;
-  flex-wrap: wrap;          /* kalau layar sempit, foto turun ke bawah */
+  flex-wrap: wrap;
   align-items: center;
   gap: 3rem;
   max-width: var(--page-width);
@@ -316,7 +277,6 @@ a:focus-visible {
   max-width: 100%;
 }
 
-/* Cahaya oranye di belakang foto, senada dengan rim light di foto */
 .hero__photo::before {
   content: "";
   position: absolute;
@@ -329,11 +289,10 @@ a:focus-visible {
   width: 100%;
   aspect-ratio: 3 / 4;
   object-fit: cover;
-  object-position: 50% 25%;   /* geser angka ke-2 kalau wajah kurang pas */
+  object-position: 50% 25%;
   border: 3px solid var(--steel);
 }
 
-/* Label nama di pojok foto, seperti name tag */
 .hero__caption {
   position: absolute;
   left: -0.75rem;
@@ -347,7 +306,6 @@ a:focus-visible {
   letter-spacing: 0.03em;
 }
 
-/* --- Animasi pembuka: satu rangkaian saat halaman dibuka --- */
 @keyframes tape-draw {
   from { transform: scaleX(0); }
   to   { transform: scaleX(1); }
@@ -466,7 +424,6 @@ a:focus-visible {
   border-left: 3px solid var(--steel);
 }
 
-/* Kotak penanda di garis linimasa */
 .timeline__body::before {
   content: "";
   position: absolute;
@@ -515,7 +472,6 @@ a:focus-visible {
   gap: 0.6rem;
 }
 
-/* Tag solid = sudah dipakai. Tag outline = masih dipelajari. */
 .tag {
   padding: 0.3rem 0.85rem;
   border: 2px solid var(--hivis);
@@ -619,7 +575,6 @@ a:focus-visible {
 
 /* ---------- 11. RESPONSIF & AKSESIBILITAS ---------- */
 
-/* Layar kecil (HP) */
 @media (max-width: 640px) {
   .site-header__inner {
     flex-direction: column;
@@ -628,7 +583,6 @@ a:focus-visible {
     padding-top: 0.6rem;
   }
 
-  /* menu digeser ke samping kalau tidak muat */
   .site-header nav {
     width: 100%;
     overflow-x: auto;
@@ -667,7 +621,6 @@ a:focus-visible {
   }
 }
 
-/* Hormati pengguna yang mematikan animasi di perangkatnya */
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;

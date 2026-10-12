@@ -7,34 +7,17 @@
   <meta name="description" content="Halaman profil Ahmad Rizqi Mubarok, mahasiswa Teknik Informatika ITATS.">
   <title>Ahmad Rizqi Mubarok | Profil</title>
 
-  <!-- Font dari Google Fonts. Kalau offline, browser otomatis pakai font cadangan di style.css -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;800&family=Public+Sans:wght@400;500;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
 
-  <!--
-    ============================================================
-    CHECKLIST EDIT (cari tanda "EDIT" lewat Ctrl+F)
-    ------------------------------------------------------------
-    1. NIM, tempat tanggal lahir, domisili, hobi  -> section #tentang
-    2. Paragraf motivasi / target karier          -> section #tentang
-    3. Tahun masuk kuliah, asal sekolah           -> section #perjalanan
-    4. Jabatan kamu di GDGoC ITATS                -> section #perjalanan
-    5. Deskripsi tugas di WebGenZ                 -> section #perjalanan
-    6. Daftar teknologi: HAPUS yang tidak bisa kamu jelaskan -> #keahlian
-    7. Nama + deskripsi proyek                    -> section #proyek
-    8. Setelah diisi, HAPUS class "edit" di tiap tempat
-       supaya highlight oranye hilang saat demo.
-    ============================================================
-  -->
 </head>
 
 <body>
   <a class="skip-link" href="#konten">Lompat ke konten</a>
 
-  <!-- HEADER: elemen semantik untuk bagian kepala halaman -->
   <header class="site-header">
     <div class="site-header__inner">
       <a class="brand" href="#beranda">Rizqi</a>
@@ -51,7 +34,6 @@
     </div>
   </header>
 
-  <!-- MAIN: isi utama halaman, hanya boleh ada satu per halaman -->
   <main id="konten">
 
     <!-- ===== HERO ===== -->
@@ -62,8 +44,7 @@
           <p class="hero__role">Mahasiswa Teknik Informatika, ITATS Surabaya</p>
           <h1 class="hero__name" id="judul-hero">Ahmad Rizqi Mubarok</h1>
           <p class="hero__intro">
-            Saya membangun aplikasi mobile dan web. Semester ini saya memperdalam
-            fondasinya, yaitu HTML dan CSS, dan halaman ini adalah hasilnya.
+            Saya adalah seorang mahasiswa Teknik Informatika di ITATS Surabaya dengan minat dalam pengembangan web.
           </p>
           <div class="hero__actions">
             <a class="btn btn--primary" href="#proyek">Lihat proyek</a>
@@ -93,21 +74,15 @@
           <div class="about__text">
             <p>
               Saya Rizqi, mahasiswa Teknik Informatika semester 3 di ITATS Surabaya.
-              Di luar kelas, saya bekerja sebagai mobile app developer di WebGenZ dan
-              aktif di GDGoC ITATS.
             </p>
-            <!-- EDIT: ganti dengan 2-3 kalimat tentang motivasi, minat, dan target karier kamu -->
             <p class="edit">
-              Tulis di sini kenapa kamu memilih dunia pengembangan perangkat lunak
-              dan apa target kamu dalam 2 sampai 3 tahun ke depan.
+              Alasan Saya memilih dan terjun ke dunia pengembangan website ini dikarebakan saya suka untuk eksplorasi dan belajar mengenai sesuatu dan segala hal yang berkaitan dengan website ini.
             </p>
           </div>
 
-          <!-- dl = description list, cocok untuk pasangan "label : nilai" -->
           <dl class="bio-list">
             <div class="bio-list__row">
               <dt>Nama lengkap</dt>
-              <!-- EDIT: samakan ejaan dengan KTM/KTP (Ahmad atau Achmad?) -->
               <dd>Ahmad Rizqi Mubarok</dd>
             </div>
             <div class="bio-list__row">
@@ -116,13 +91,11 @@
             </div>
             <div class="bio-list__row">
               <dt>NIM</dt>
-              <!-- EDIT -->
-              <dd class="edit">Isi NIM kamu</dd>
+              <dd class="edit">06.2025.1.07900</dd>
             </div>
             <div class="bio-list__row">
               <dt>Tempat, tanggal lahir</dt>
-              <!-- EDIT -->
-              <dd class="edit">Isi kota, tanggal lahir</dd>
+              <dd class="edit">Surabaya, 10 April 2007</dd>
             </div>
             <div class="bio-list__row">
               <dt>Program studi</dt>
@@ -138,13 +111,11 @@
             </div>
             <div class="bio-list__row">
               <dt>Domisili</dt>
-              <!-- EDIT -->
-              <dd class="edit">Isi kota domisili</dd>
+              <dd class="edit">Surabaya</dd>
             </div>
             <div class="bio-list__row">
               <dt>Hobi</dt>
-              <!-- EDIT -->
-              <dd class="edit">Isi hobi kamu</dd>
+              <dd class="edit">Membaca. Bermain Game, Ngoding Tiap hari sampek  badan sakit</dd>
             </div>
             <div class="bio-list__row">
               <dt>Email</dt>
@@ -157,14 +128,12 @@
 
     <div class="tape" aria-hidden="true"></div>
 
-    <!-- ===== PERJALANAN (urutan = linimasa, jadi pakai ol) ===== -->
     <section class="section" id="perjalanan" aria-labelledby="judul-perjalanan">
       <div class="container">
         <h2 class="section__title" id="judul-perjalanan">Perjalanan</h2>
 
         <ol class="timeline">
           <li class="timeline__item">
-            <!-- EDIT: tahun masuk kuliah -->
             <p class="timeline__when edit"><time datetime="2025">2025 - sekarang</time></p>
             <div class="timeline__body">
               <h3>Teknik Informatika, ITATS</h3>
@@ -175,27 +144,24 @@
           <li class="timeline__item">
             <p class="timeline__when">Aktif</p>
             <div class="timeline__body">
-              <h3>Mobile App Developer, WebGenZ</h3>
-              <!-- EDIT: ganti dengan tugas nyata kamu -->
-              <p class="edit">Startup jasa pengembangan web dan aplikasi beranggotakan lima orang. Tulis tugas utama kamu di sini.</p>
+              <h3>Full -Stack Developer, WebGenZ</h3>
+              <p class="edit">Rancang bangun Website Monolitik ke Microservices pada War Ticket Platform Pada Studi Kasus Pengembangan Rekayasa Perangkat Lunak.</p>
             </div>
           </li>
 
           <li class="timeline__item">
             <p class="timeline__when">Aktif</p>
             <div class="timeline__body">
-              <h3>GDGoC ITATS</h3>
-              <!-- EDIT: tulis jabatan/divisi kamu kalau ada -->
-              <p class="edit">Komunitas pengembang mahasiswa. Tulis jabatan atau divisi kamu di sini.</p>
+              <h3>HMIF ITATS</h3>
+              <p class="edit">Saya Menjabat sebagai Ketua Himpunana Mahasiswa teknik Informatika ITATS Periode 2026 - 2027 di Kabinet Asakusa.</p>
             </div>
           </li>
 
           <li class="timeline__item">
-            <!-- EDIT -->
-            <p class="timeline__when edit"><time datetime="2025">Tahun lulus</time></p>
+            <p class="timeline__when edit"><time datetime="2025">2025</time></p>
             <div class="timeline__body">
-              <h3 class="edit">Nama SMA / SMK / MA</h3>
-              <p>Jurusan atau peminatan kamu (boleh dihapus kalau tidak perlu).</p>
+              <h3 class="edit">Man 4 Jombang</h3>
+              <p>Saya dulu bersekolah dan menempuh pendidikan disana lebih tepatnya diDenanyar, jombang.</p>
             </div>
           </li>
         </ol>
@@ -209,20 +175,18 @@
       <div class="container">
         <h2 class="section__title" id="judul-keahlian">Keahlian</h2>
         <p class="section__lead">
-          Tidak ada persentase di sini. Persentase keahlian itu angka karangan,
-          jadi saya pisahkan berdasarkan apa yang sudah dipakai dan apa yang sedang dipelajari.
+          Teknologi yang sudah saya kuasai dan sedang saya pelajari.
         </p>
 
         <div class="skill-groups">
-          <!-- EDIT: hapus teknologi yang tidak bisa kamu jelaskan di depan dosen -->
           <section class="skill-group" aria-labelledby="judul-dipakai">
             <h3 id="judul-dipakai">Sudah dipakai di proyek</h3>
             <ul class="tags">
-              <li class="tag">Flutter</li>
-              <li class="tag">Next.js</li>
+              <li class="tag">HTML</li>
+              <li class="tag">CSS</li>
+              <li class="tag">JavaScript</li>
+              <li class="tag">TypesScript</li>
               <li class="tag">React</li>
-              <li class="tag">Laravel</li>
-              <li class="tag">NestJS</li>
               <li class="tag">Supabase</li>
             </ul>
           </section>
@@ -245,8 +209,6 @@
     <section class="section" id="proyek" aria-labelledby="judul-proyek">
       <div class="container">
         <h2 class="section__title" id="judul-proyek">Proyek</h2>
-
-        <!-- EDIT: ganti / tambah proyek. Satu <li> = satu proyek -->
         <ul class="project-list">
           <li>
             <article class="project">
